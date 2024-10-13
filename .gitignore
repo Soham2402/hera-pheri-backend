@@ -1,0 +1,108 @@
+env
+keys
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+*.env
+*.env.*
+
+# FastAPI specific logs and files
+*.log
+*.pid
+*.pyc
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# Docker files
+*.log
+docker-compose.override.yml
+*.local
+*.bak
+Dockerfile.*
+
+# macOS system files
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Test and coverage
+.pytest_cache/
+coverage.xml
+htmlcov/
+*.cover
+.cache
+
+# Coverage reports
+.coverage
+*.cover
+.hypothesis/
+
+# Pylint
+pylint.log
+
+# mypy
+.mypy_cache/
+
+# Pyre
+.pyre/
+
+# Bandit security check
+.bandit/
+
+# FastAPI build files
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Pipfile and poetry
+Pipfile.lock
+poetry.lock
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Sphinx documentation
+docs/_build/
+
+# Local SQLite database files
+*.sqlite3
+
+# Node.js (if you're using npm or yarn for frontend)
+node_modules/
+yarn.lock
+package-lock.json
+
+# Binaries
+bin/
+obj/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ansible
+*.retry
+
