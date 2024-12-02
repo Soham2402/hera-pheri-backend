@@ -3,6 +3,7 @@ import logging
 from fastapi import FastAPI
 
 from src.database import CLIENT, DB_NAME
+from src.participant.routers import router as participant_routers
 
 
 async def db_lifespan(app: FastAPI):
@@ -20,3 +21,10 @@ async def db_lifespan(app: FastAPI):
     app.mongodb_client.close()
 
 app = FastAPI(lifespan=db_lifespan)
+
+
+async def get_database():
+    """Dependency to provide the database instance."""
+    return app.database
+
+app.include_router(participant_routers)

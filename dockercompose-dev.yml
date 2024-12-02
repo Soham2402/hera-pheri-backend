@@ -1,12 +1,20 @@
-version: "3.8"
-
 services:
   app:
     build: .
     volumes:
-      - .:/app
-    env_file: # Load environment variables from .env file
-      - /keys/.dev-keys
+      - .:/app:cached # Mount local directory to the container
+    env_file:
+      - keys/.dev-keys # Load environment variables
     ports:
-      - "8000:8000"
-    command: ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--port", "8000"]
+      - "8000:8000" # Map local port to container port
+    command: [
+        "uvicorn",
+        "src.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8000",
+        "--reload",
+      ] # Enable hot reloading
+    environment:
+      - ENV=development # Optional: Set a development environment variable
